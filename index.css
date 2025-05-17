@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: url('./assets/texture.gif');
+    background-size: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: url('./assets/ocean-texture.jpg') repeat center center/cover;
+    width: 100%;
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+
+    animation: moveBackground 30s linear infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative
+}
+
+header .fish {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 24px;
+    cursor: pointer;
+}
+
+header .fish-2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 24px;
+    transform: scaleX(-1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1000px 0;
+        /* ajuste conforme o tamanho da imagem */
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 0 8px;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MAIN */
+
+main {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.main-content {
+    max-width: 800px;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 32px;
+    padding: 32px 64px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background: url('./assets/ocean-texture.jpg') repeat center center/cover;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 40px;
+    padding: 24px 0;
+    width: 100%;
+
+    animation: moveBackground 30s linear infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* sidebar */
+
+.sidebar {
+    width: 250px;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: absolute;
+    z-index: 99;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    background: url('./assets/cat-dancing.gif') repeat;
+    background-color: #f9f9f9;
+    background-size: 120px 120px;
+    background-position: left;
+}
+
+.sidebar-content {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 24px;
+}
+
+.sidebar.hidden {
+    display: none;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    color: #ffffff;
+    padding: 0;
+
+}
+
+.sidebar ul li {
+    margin-bottom: 16px;
+    color: #ffffff;
+
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff;
+}
+
+.content {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
