@@ -6,28 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack D. Poseidon</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main-content.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <aside class="sidebar hidden">
-        <div class="sidebar-content">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </div>
-    </aside>
-
     <header>
         <img onclick="opensidebar()" class="fish" src="./assets/fish.gif" height="120" width="120" />
-        <h1>Jack D. Poseidon</h1>
+        <h1 class="coral-pixels-regular">Jack D Poseidon</h1>
 
         <ul class="nav">
-            <li>websites</li>
-            <li>Kitties</li>
+            <li><a href="https://github.com/ElandVarse" target="_blank">websites</a></li>
+            <li class="anime-girl-item"><img src="https://cdn.discordapp.com/emojis/742298286831960065.gif?size=48"
+                    alt="anime"> </li>
             <li>catnip</li>
             <li>silly posts</li>
         </ul>
@@ -35,14 +29,25 @@
     </header>
 
     <main>
-        <div class="main-content">
+        <aside class="main-sidebar main-sidebar--left">
+        </aside>
 
-            <h1>Welcome to my Neocities page!</h1>
-            <p>Here you can find all my projects and interests.</p>
+        <div class="main-content">
+            <h2>Hi, I'm Jack. Nice to meet you!</h2>
+            <p>Click the cat</p>
 
             <a href="https://github.com/ElandVarse" target="_blank"><img src="./assets/oia-uia.gif"
                     alt="A cute kitten"></a>
         </div>
+
+        <aside class="chat-sidebar">
+            <div id="chat" class="chat-sidebar__content">
+                <iframe src="https://www3.cbox.ws/box/?boxid=3546768&boxtag=4iC1Wg" width="100%" height="450"
+                    allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0"
+                    scrolling="auto"></iframe>
+            </div>
+        </aside>
+
     </main>
 
     <footer>
@@ -51,31 +56,10 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const sidebar = document.querySelector('.sidebar');
-        const fish = document.querySelector('.fish');
-        const mainWrapper = document.querySelector('.main-wrapper');
-
-        fish.addEventListener('click', (event) => {
-            sidebar.classList.toggle('hidden');
-            mainWrapper.classList.toggle('blurred');
-            event.stopPropagation();
-        });
-
-        sidebar.addEventListener('click', (event) => {
-            event.stopPropagation();
-        });
-
-        document.body.addEventListener('click', (event) => {
-            const clicouForaSidebar = !sidebar.contains(event.target);
-            const clicouForaFish = !fish.contains(event.target);
-
-            if (!sidebar.classList.contains('hidden') && clicouForaSidebar && clicouForaFish) {
-                sidebar.classList.add('hidden');
-                mainWrapper.classList.remove('blurred');
-            }
-        });
-    });
+    window.onload = function () {
+        const chatBox = document.getElementById("chat");
+        chatBox.scrollTop = chatBox.scrollHeight;
+    };
 </script>
 
 </html>
