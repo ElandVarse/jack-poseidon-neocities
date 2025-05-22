@@ -1,7 +1,7 @@
 /* MAIN */
 
 main {
-    padding: 20px;
+    max-width: 1200px;
     border-radius: 8px;
     width: 100%;
     height: 100%;
@@ -9,7 +9,7 @@ main {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex: 1;
 }
 
@@ -19,30 +19,31 @@ main {
     width: 50%;
     height: 400px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 32px;
     padding: 32px 64px;
 
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 6px solid #37ffbc;
+
+    background: url('./assets/apelido.jpg.webp') no-repeat center center/contain;
 }
 
-.main-content h2 {
+.main-sidebar h2 {
     font-size: 2rem;
     margin-bottom: 16px;
 }
 
 .main-sidebar {
-    background-color: rgb(24, 71, 226);
+    background-color: rgba(19, 180, 19, 0.738);
+    border: 8px solid rgba(29, 255, 48, 0.738);
     height: 100%;
     width: 22%;
-}
+    color: white;
 
-.main-sidebar.main-sidebar--left {
-    background: url('./assets/apelido.jpg.webp') repeat center center/contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
 .chat-sidebar {
