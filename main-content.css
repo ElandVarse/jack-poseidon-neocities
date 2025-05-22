@@ -46,6 +46,11 @@ main {
     text-align: center;
 }
 
+.main-sidebar .cat__img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
 .chat-sidebar {
     height: 100%;
     width: 22%;
