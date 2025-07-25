@@ -17,13 +17,8 @@ main {
 .main-content {
     max-width: 700px;
     width: 50%;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.8);
     padding: 32px 64px;
-
-
-
-    background: url('/assets/apelido.jpg.webp') no-repeat center center/contain;
+    background-color: blue;
 }
 
 .main-sidebar h2 {
@@ -64,4 +59,42 @@ main {
     overflow-y: scroll;
     max-height: 300px;
     max-width: 250px;
+}
+
+/* ------------------- POST ------------------ */
+
+.post {
+    color: white;
+    margin: 24px 0;
+    width: 100%;
+    border: 1px solid #f9f9f9;
+    padding: 24px 16px;
+    background-color: rgb(25, 0, 107);
+}
+
+.post__article {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.post__article img {
+    border-radius: 50%; 
+    z-index: 999;
+}
+
+.post__article time {
+    margin-left: -4px;
+    margin-right: 8px;
+    background-color: #00000096;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.post__title {
+    margin: 16px 0 8px 0
+}
+
+.post--text {
+    background-color: red;
 }
