@@ -19,6 +19,8 @@ main {
     width: 50%;
     padding: 32px 64px;
     background-color: blue;
+    max-height: calc(70vh - 64px);
+    overflow: auto;
 }
 
 .main-sidebar h2 {
