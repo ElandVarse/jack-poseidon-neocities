@@ -1,0 +1,24 @@
+# Sistemas
+.DS_Store
+Thumbs.db
+
+# Diretórios e arquivos temporários
+node_modules/
+dist/
+build/
+*.log
+*.tmp
+
+# Arquivos de deploy e configs pessoais
+.env
+deploy.sh
+
+# VS Code settings
+.vscode/
+
+# Zip baixado do Neocities (caso esteja por lá)
+*.zip
+
+# Arquivos que você não quer versionar
+*.bak
+*.old

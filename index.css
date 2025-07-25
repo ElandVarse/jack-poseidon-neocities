@@ -8,13 +8,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url('./assets/trident-cursor.cur'), pointer;
+    cursor: url('/assets/trident-cursor.cur'), pointer;
 }
 
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background: url('./assets/texture.gif');
+    background: url('/assets/texture.gif');
     background-size: auto;
     margin: 0;
     padding: 0;
@@ -92,7 +92,7 @@ header .fish-2 {
     border: 4px solid #0091ff76;
     margin: 0 auto;
     box-shadow: 16px 16px 8px rgba(0, 0, 0, 0.2);
-    background: url('./assets/ocean-texture.jpg') repeat center center/cover;
+    background: url('/assets/ocean-texture.jpg') repeat center center/cover;
     animation: moveBackground 60s linear infinite;
 }
 

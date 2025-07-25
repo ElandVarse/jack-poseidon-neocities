@@ -23,7 +23,7 @@ main {
 
 
 
-    background: url('./assets/apelido.jpg.webp') no-repeat center center/contain;
+    background: url('/assets/apelido.jpg.webp') no-repeat center center/contain;
 }
 
 .main-sidebar h2 {
