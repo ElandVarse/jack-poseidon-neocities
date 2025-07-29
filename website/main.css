@@ -1,26 +1,21 @@
 /* MAIN */
 
 main {
-    max-width: 1200px;
     border-radius: 8px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex: 1;
+    margin-bottom: 60px;
 }
 
 
 .main-content {
-    max-width: 700px;
-    width: 50%;
-    padding: 32px 64px;
-    background-color: blue;
-    max-height: calc(70vh - 64px);
-    overflow: auto;
+    height: 100%;
 }
 
 .main-sidebar h2 {
@@ -28,12 +23,13 @@ main {
     margin-bottom: 16px;
 }
 
-.main-sidebar {
+.cat-sidebar {
     background-color: rgba(19, 180, 19, 0.738);
     border: 8px solid rgba(29, 255, 48, 0.738);
     height: 100%;
-    width: 22%;
+    width: 100%;
     color: white;
+    font-size: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -50,10 +46,11 @@ main {
 
 .chat-sidebar {
     height: 100%;
-    width: 22%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -67,11 +64,12 @@ main {
 
 .post {
     color: white;
-    margin: 24px 0;
-    width: 100%;
+    margin-bottom: 24px;
     border: 1px solid #f9f9f9;
     padding: 24px 16px;
-    background-color: rgb(25, 0, 107);
+    width: 100%;
+    background-color: #3d3d3dad;
+    border: 4px solid #555555
 }
 
 .post__article {
@@ -99,4 +97,31 @@ main {
 
 .post--text {
     background-color: red;
+}
+
+@media (max-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 768px) {
+    main {
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-content {
+        width: 50%;
+    }
+
+    .cat-sidebar {
+        width: 22%;
+        height: 100%;
+    }
+
+    .chat-sidebar {
+        width: 22%;
+    }
 }
