@@ -20,7 +20,7 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background: url('/assets/texture.gif');
+    background: url('./assets/texture.gif');
     background-size: auto;
     margin: 0 auto;
     padding: 0;
@@ -103,7 +103,7 @@ header h1 {
     border: 4px solid #0091ff76;
     margin: 0 auto;
     box-shadow: 16px 16px 8px rgba(0, 0, 0, 0.2);
-    background: url('/assets/ocean-texture.jpg') repeat center center/cover;
+    background: url('./assets/ocean-texture.jpg') repeat center center/cover;
     animation: moveBackground 60s linear infinite;
 }
 
@@ -156,6 +156,30 @@ footer {
 
     position: absolute;
     bottom: 0;
+}
+
+.post-image {
+    cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;            /* escondido por padrão */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.7);
+  z-index: 1000;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: zoom-out;
+  border-radius: 8px;
+  transform: scale(1.2);
 }
 
 @media (max-width: 767px) {
